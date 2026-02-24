@@ -9,6 +9,7 @@ then the swap takes place as 1,1
 the same
 ---
 >now arr[i]=0 
+
 which leads to skip the increment of the left then 
 >left=2 but i =3 
 as by the loop

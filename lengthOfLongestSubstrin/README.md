@@ -1,19 +1,19 @@
-# 🔥 Longest Substring Without Repeating Characters
+#  Longest Substring Without Repeating Characters
 
 ---
 
-## 🧩 Problem Summary
+##  Problem Summary
 
 Given a string `s`, find the length of the **longest substring without repeating characters**.
 
-### 📌 Important
+###  Important
 
 * Substring = **continuous**
 * No duplicate characters allowed
 
 ---
 
-## 💡 Core Idea: Sliding Window
+##  Core Idea: Sliding Window
 
 We maintain a dynamic window:
 
@@ -28,9 +28,9 @@ We use a **HashSet** to track characters inside the window.
 
 ---
 
-## 🧠 Step-by-Step Explanation
+##  Step-by-Step Explanation
 
-### 1️⃣ Initialization
+### 1️ Initialization
 
 ```java
 int maxlength = 0;
@@ -44,7 +44,7 @@ int left = 0;
 
 ---
 
-### 2️⃣ Traverse the string
+### 2️ Traverse the string
 
 ```java
 for (int right = 0; right < s.length(); right++)
@@ -54,7 +54,7 @@ for (int right = 0; right < s.length(); right++)
 
 ---
 
-### 3️⃣ Remove duplicates (MOST IMPORTANT)
+### 3️ Remove duplicates (MOST IMPORTANT)
 
 ```java
 while (set.contains(s.charAt(right))) {
@@ -63,19 +63,19 @@ while (set.contains(s.charAt(right))) {
 }
 ```
 
-#### ❓ Why?
+####  Why?
 
-* If character already exists → duplicate ❌
+* If character already exists → duplicate 
 * So we shrink the window from the left
 
-#### ❓ Why `while` and not `if`?
+####  Why `while` and not `if`?
 
 * One removal may NOT be enough
-* We keep removing until window becomes valid ✅
+* We keep removing until window becomes valid 
 
 ---
 
-### 4️⃣ Add current character
+### 4️ Add current character
 
 ```java
 set.add(s.charAt(right));
@@ -85,7 +85,7 @@ set.add(s.charAt(right));
 
 ---
 
-### 5️⃣ Update maximum length
+### 5️ Update maximum length
 
 ```java
 maxlength = Math.max(maxlength, right - left + 1);
@@ -96,7 +96,7 @@ maxlength = Math.max(maxlength, right - left + 1);
 
 ---
 
-## 🎬 Dry Run Example
+##  Dry Run Example
 
 ### Input:
 
@@ -109,7 +109,7 @@ s = "abcabcbb"
 ```
 Step 1: "a"       → max = 1
 Step 2: "ab"      → max = 2
-Step 3: "abc"     → max = 3 ✅
+Step 3: "abc"     → max = 3 
 Step 4: "bca"     → max = 3
 Step 5: "cab"     → max = 3
 Step 6: adjust... → max = 3
@@ -117,7 +117,7 @@ Step 6: adjust... → max = 3
 
 ---
 
-## 🧠 Key Concepts
+##  Key Concepts
 
 ### 🔹 Sliding Window Pattern
 
@@ -150,7 +150,7 @@ Window Size = right - left + 1
 
 ---
 
-## 🚀 One-Line Summary
+##  One-Line Summary
 
 > Expand window → remove duplicates → update max length
 

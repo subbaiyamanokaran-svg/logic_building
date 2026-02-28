@@ -21,7 +21,7 @@ We maintain a dynamic window:
 [left -------- right]
 ```
 
-* ``right`` → expands the window
+* ```right``` → expands the window
 * `left` → shrinks the window when duplicates appear
 
 We use a **HashSet** to track characters inside the window.

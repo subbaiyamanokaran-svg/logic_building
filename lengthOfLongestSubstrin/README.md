@@ -18,12 +18,10 @@ Given a string `s`, find the length of the **longest substring without repeating
 We maintain a dynamic window:
 
 ```
-[left -------- right]
+[left -------- i]
 ```
 
-* ```
-right
-``` → expands the window
+* ``i`` → expands the window
 * `left` → shrinks the window when duplicates appear
 
 We use a **HashSet** to track characters inside the window.
@@ -49,17 +47,17 @@ int left = 0;
 ### 2️ Traverse the string
 
 ```java
-for (int right = 0; right < s.length(); right++)
+for (int i = 0; i < s.length(); i++)
 ```
 
-* `right` represents the **end of the window**
+* `i` represents the **end of the window**
 
 ---
 
 ### 3️ Remove duplicates (MOST IMPORTANT)
 
 ```java
-while (set.contains(s.charAt(right))) {
+while (set.contains(s.charAt(i))) {
     set.remove(s.charAt(left));
     left++;
 }
@@ -80,7 +78,7 @@ while (set.contains(s.charAt(right))) {
 ### 4️ Add current character
 
 ```java
-set.add(s.charAt(right));
+set.add(s.charAt(i));
 ```
 
 * Now the window has no duplicates
@@ -90,10 +88,10 @@ set.add(s.charAt(right));
 ### 5️ Update maximum length
 
 ```java
-maxlength = Math.max(maxlength, right - left + 1);
+maxlength = Math.max(maxlength, i - left + 1);
 ```
 
-* `right - left + 1` → current window size
+* `i - left + 1` → current window size
 * We store the maximum seen so far
 
 ---
@@ -123,7 +121,7 @@ Step 6: adjust... → max = 3
 
 ### 🔹 Sliding Window Pattern
 
-* Expand → `right++`
+* Expand → `i++`
 * Shrink → `left++`
 
 ---
@@ -138,7 +136,7 @@ Step 6: adjust... → max = 3
 ### 🔹 Important Formula
 
 ```
-Window Size = right - left + 1
+Window Size = i - left + 1
 ```
 
 ---

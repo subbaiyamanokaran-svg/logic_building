@@ -71,7 +71,14 @@ while (set.contains(s.charAt(i))) {
 ####  Why `while` and not `if`?
 
 * One removal may NOT be enough
-* We keep removing until window becomes valid 
+* We keep removing until window becomes valid
+
+like is you put if it only remove once for example `abba`
+it is is now 
+1.a
+2.ab
+3.abb
+when four the b inside will not be romoved instead the a only is removes then it becomes `bb` on the next iteration for that only we use while which removes every element untll it reaches next to b
 
 ---
 

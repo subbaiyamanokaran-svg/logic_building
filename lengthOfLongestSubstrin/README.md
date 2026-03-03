@@ -126,21 +126,21 @@ Step 6: adjust... → max = 3
 
 ##  Key Concepts
 
-### 🔹 Sliding Window Pattern
+###  Sliding Window Pattern
 
 * Expand → `i++`
 * Shrink → `left++`
 
 ---
 
-### 🔹 HashSet Purpose
+###  HashSet Purpose
 
 * Fast duplicate check → **O(1)**
 * Avoids scanning substring
 
 ---
 
-### 🔹 Important Formula
+###  Important Formula
 
 ```
 Window Size = i - left + 1
@@ -148,7 +148,7 @@ Window Size = i - left + 1
 
 ---
 
-## ⏱ Complexity
+##  Complexity
 
 | Type  | Value |
 | ----- | ----- |

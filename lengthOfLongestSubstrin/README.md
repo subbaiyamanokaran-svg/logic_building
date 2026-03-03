@@ -1,10 +1,26 @@
 #  Longest Substring Without Repeating Characters
 
 ---
+## 📝 Problem Statement
 
-##  Problem Summary
+Given a string `s`, find the length of the **longest substring** without repeating characters.
 
-Given a string `s`, find the length of the **longest substring without repeating characters**.
+* **Substring:** A **continuous** sequence of characters within a string.
+* **Constraint:** No character can appear more than once in the window.
+
+---
+
+## 💡 Core Concept: The Sliding Window
+
+To solve this efficiently in **$O(n)$** time, we use a **Sliding Window** approach with two pointers: `left` and `i` (right).
+
+
+
+### How it works:
+1.  **Expand:** The pointer `i` moves to the right, adding characters to our current window.
+2.  **Validate:** We use a `HashSet` to store characters currently in the window.
+3.  **Contract:** If we encounter a character already in the `HashSet`, we shrink the window from the `left` until that duplicate is removed.
+4.  **Update:** At each step, we calculate the window size: `i - left + 1`.
 
 ###  Important
 

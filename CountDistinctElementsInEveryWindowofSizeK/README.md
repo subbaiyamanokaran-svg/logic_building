@@ -4,13 +4,13 @@ A Java-based solution to find the count of unique integers in every sliding wind
 
 ---
 
-## 📖 Description
+##  Description
 
 The problem involves an array of size `n` and a window of size `k`. The window slides from the start of the array to the end, one element at a time. For each window, the program identifies how many distinct (unique) numbers are present.
 
 
 
-## 🛠️ Logic & Implementation
+##  Logic & Implementation
 
 Instead of re-calculating the count for every window (which would be slow), this program uses a **Frequency Map** strategy:
 
@@ -22,7 +22,7 @@ Instead of re-calculating the count for every window (which would be slow), this
 
 ---
 
-## 📊 Performance
+##  Performance
 
 | Metric | Complexity |
 | :--- | :--- |
@@ -31,7 +31,7 @@ Instead of re-calculating the count for every window (which would be slow), this
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 1.  **Save the file**: Ensure your file is named `Main.java`.
 2.  **Compile**:
@@ -49,3 +49,4 @@ Instead of re-calculating the count for every window (which would be slow), this
 ```text
 1 2 1 3 4 2 3
 Enter window size (k): 4
+3 4 4 3

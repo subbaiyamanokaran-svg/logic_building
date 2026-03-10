@@ -1,0 +1,1 @@
+I have prefer python Instead of java in this which makes it easier to create but time complexity is lesser in java
